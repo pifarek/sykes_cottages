@@ -2,9 +2,9 @@
 
 How to install:
 
-- git clone https://github.com/pifarek/tasks
+- git clone https://github.com/pifarek/sykes_cottages
 - composer update
 - modify .env file
 
 Run tests:
-- php php vendor/phpunit/phpunit/sykes_cottages
+- php php vendor/phpunit/phpunit/phpunit
