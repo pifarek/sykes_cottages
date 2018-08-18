@@ -20,6 +20,8 @@
                 </div>
             </div>
         </div>
+
+        {!! $properties->render() !!}
     @endforeach
 
     @else

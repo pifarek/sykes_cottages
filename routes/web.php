@@ -12,5 +12,5 @@
 */
 
 
-Route::post('results', 'IndexController@results')->name('results');
+Route::get('results', 'IndexController@results')->name('results');
 Route::get('/', 'IndexController@index')->name('index');

@@ -22,8 +22,8 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0" method="post" action="{{ route('results') }}">
-                @method('POST')
+            <form class="form-inline my-2 my-lg-0" method="get" action="{{ route('results') }}">
+                @method('GET')
                 @csrf
                 <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search Location" aria-label="Search" value="{{ old('search') }}">
 
