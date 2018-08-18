@@ -25,25 +25,25 @@
             <form class="form-inline my-2 my-lg-0" method="get" action="{{ route('results') }}">
                 @method('GET')
                 @csrf
-                <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search Location" aria-label="Search" value="{{ old('search') }}">
+                <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search Location" aria-label="Search" value="{{ old('search', request('search')) }}">
 
                 <div class="form-check mr-sm-2">
-                    <input class="form-check-input" type="checkbox" value="1" checked id="near_the_beach" name="near_the_beach">
+                    <input class="form-check-input" type="checkbox"{!! old('near_the_beach', request('near_the_beach', 1))? ' checked' : '' !!} value="1"  id="near_the_beach" name="near_the_beach">
                     <label class="form-check-label" for="near_the_beach">
                         Near the beach
                     </label>
                 </div>
 
                 <div class="form-check mr-sm-2">
-                    <input class="form-check-input" type="checkbox" value="1" checked id="accepts_pets" name="accepts_pets">
+                    <input class="form-check-input" type="checkbox"{!! old('accepts_pets', request('accepts_pets', 1))? ' checked' : '' !!} value="1"id="accepts_pets" name="accepts_pets">
                     <label class="form-check-label" for="accepts_pets">
                         Accepts pets
                     </label>
                 </div>
 
-                <input type="number" class="form-control mr-sm-2" placeholder="Number of sleeps" min="1" max="10" name="sleeps" value="{{ old('sleeps') }}">
+                <input type="number" class="form-control mr-sm-2" placeholder="Number of sleeps" min="1" max="10" name="sleeps" value="{{ old('sleeps', request('sleeps')) }}">
 
-                <input type="number" class="form-control mr-sm-2" placeholder="Number of beds" min="1" max="10" name="beds" value="{{ old('beds') }}">
+                <input type="number" class="form-control mr-sm-2" placeholder="Number of beds" min="1" max="10" name="beds" value="{{ old('beds', request('beds')) }}">
 
                 <select class="form-control mr-sm-2" name="availability" value="{{ old('availability') }}">
                     <option value="1">Available</option>
